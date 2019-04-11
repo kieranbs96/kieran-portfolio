@@ -1,0 +1,24 @@
+.header {
+  background: $mainColor;
+  color: #fff;
+
+  width: 35rem;
+  height: 20rem;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+
+  &__text {
+    transform: rotate(30.5deg);
+    margin-left: 11rem;
+    margin-top: 5.5rem;
+  }
+}
+
+.main {
+  margin-top: 15rem;
+  background: lightblue;
+}
