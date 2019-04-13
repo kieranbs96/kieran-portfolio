@@ -7,7 +7,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: Helvetica, sans-serif;
+  font-family: "Montserrat", Helvetica, sans-serif;
   padding: 0;
   margin: 0;
   background: #fff;
@@ -17,28 +17,60 @@ h1, h2, h3, h4, p {
   margin: 0; }
 
 .header {
-  background: #1a3549;
-  color: #fff;
-  width: 35rem;
-  height: 20rem;
+  color: #1a3549;
+  background: white;
+  width: 100%;
   position: fixed;
   top: 0;
   right: 0;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%); }
-  .header__text {
-    transform: rotate(30.5deg);
-    margin-left: 6rem;
-    margin-top: 3.5rem;
-    text-align: center; }
-  .header__name {
+  transition: all .5s; }
+  .header.scrolled {
+    background: #1a3549; }
+    .header.scrolled .header__nav-list-item-link, .header.scrolled .header__name a {
+      color: #fff; }
+      .header.scrolled .header__nav-list-item-link:hover, .header.scrolled .header__name a:hover {
+        color: #ffc600; }
+  .header__container {
+    padding: .3rem 10vw;
+    display: flex;
+    justify-content: space-between; }
+  .header__nav {
+    display: flex;
+    align-items: center; }
+    .header__nav-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .header__nav-list-item:not(:last-child) {
+        margin-right: 1rem; }
+      .header__nav-list-item-link {
+        color: #1a3549;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        transition: all .5s; }
+        .header__nav-list-item-link:hover {
+          color: #ffc600; }
+  .header__name a {
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 2.8rem; }
-  .header__title {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    font-size: 2rem; }
+    font-size: 2.8rem;
+    transition: all .5s;
+    color: #1a3549;
+    text-decoration: none; }
+    .header__name a:hover {
+      color: #ffc600; }
 
 .main {
   margin-top: 15rem;
-  background: lightblue;
-  padding: 15rem; }
+  padding: 0 10vw; }
+  .main__container {
+    margin-bottom: 1.5rem; }
+
+.footer {
+  margin-top: 10rem;
+  background: #1a3549;
+  color: white; }
+  .footer__container {
+    padding: 25px; }

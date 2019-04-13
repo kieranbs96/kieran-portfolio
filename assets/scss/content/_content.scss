@@ -1,39 +1,112 @@
 .header {
-  background: $mainColor;
-  color: #fff;
+  color: $mainColor;
+  background: white;
 
-  width: 35rem;
-  height: 20rem;
+  width: 100%;
 
   position: fixed;
   top: 0;
   right: 0;
 
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  transition: all .5s;
+
+  &.scrolled {
+    background: $mainColor;
+
+    .header__nav-list-item-link, .header__name a {
+      color: #fff;
+
+      &:hover {
+        color: #ffc600;
+      }
+    }
+  }
+
+  &__container {
+    padding: .3rem 10vw;
+
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    &-list {
+      display: flex;
+      align-items: center;
+
+      list-style: none;
+
+      margin: 0;
+      padding: 0;
+
+      &-item {
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        &-link {
+          color: $mainColor;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+
+          transition: all .5s;
+
+          &:hover {
+            color: #ffc600;
+          }
+
+        }
+      }
+    }
+  }
 
   &__text {
-    transform: rotate(30.5deg);
-    margin-left: 6rem;
-    margin-top: 3.5rem;
 
-    text-align: center;
   }
 
   &__name {
-    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 2.8rem;
-  }
 
-  &__title {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    font-size: 2rem;
+    a {
+      font-family: "Kaushan Script", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 2.8rem;
+
+      transition: all .5s;
+      color: $mainColor;
+      text-decoration: none;
+
+      &:hover {
+        color: #ffc600;
+      }
+    }
+
+
   }
 }
 
 .main {
   margin-top: 15rem;
-  background: lightblue;
+  padding: 0 10vw;
 
-  padding: 15rem
+  &__container {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.footer {
+  margin-top: 10rem;
+
+  background: $mainColor;
+  color: white;
+  &__container {
+    padding: 25px;
+  }
+}
+
+.contact {
+
 }

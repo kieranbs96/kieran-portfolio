@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "watch:sass": "node-sass assets/scss/main.scss assets/css/main.css -w",
-    "devserver": "live-server",
+    "devserver": "live-server --ignore=node_modules",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass assets/scss/main.scss assets/css/main.comp.css",
     "prefix:css": "postcss --use autoprefixer -c options.json -o assets/css/main.prefix.css assets/css/main.comp.css",
