@@ -11,6 +11,7 @@
   </head>
 
   <body id="body">
+    <div class="root-container">
     <header class="header">
       <div class="header__container">
         <div class="header__text">
@@ -49,9 +50,17 @@
         <h2>Blog</h2>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorum ipsum quam pariatur nostrum accusamus officia. Natus, at tempora? Recusandae dolores quas temporibus reiciendis ut aperiam, rem porro nisi facere ipsum! Aliquid magni neque libero? Optio commodi doloremque ab mollitia distinctio quasi labore cumque assumenda dolorum laudantium eos, quisquam, similique provident soluta alias fuga numquam ducimus voluptas ullam quia beatae consequuntur praesentium. Eos esse, dolor, debitis nulla, facilis laudantium fuga perferendis accusantium et dolore distinctio cupiditate voluptatibus! Ullam nisi repudiandae veniam soluta error temporibus consequatur laudantium sit blanditiis, odio dolores iure illum officia obcaecati dolore consequuntur. At numquam obcaecati recusandae, beatae ipsa reprehenderit modi, quos veniam labore enim possimus culpa et iusto consectetur perspiciatis. Corrupti facilis a nisi ratione earum fuga quod inventore expedita quia provident quibusdam id cumque doloribus ex consequatur quas non ipsum hic, laudantium quo. Eligendi praesentium nisi dolor maiores id est sunt aliquid iusto voluptates laborum.
       </section>
-      <section id="contact" class="main__container">
-        <h2>Contact</h2>
-        <form action="POST" data-netlify="true">
+
+      <section id="contact" class="contact main__container">
+        <div class="contact__description">
+          <h2>Contact Me</h2>
+          <p>
+            Want to work with me or just have a completely random question?
+            <br><span>Feel free to message me using the form next to me. I will get back to you as quick as I can<span>
+
+          </p>
+        </div>
+        <form class="contact__form" action="POST" data-netlify="true">
           <div class="fields">
             <div class="field half">
               <input type="text" name="name" id="name" placeholder="Name" />
@@ -67,19 +76,23 @@
             </div>
           </div>
           <ul class="actions">
-            <li><input type="submit" value="Send Message" class="button primary" /></li>
+            <li><input type="submit" value="Send" class="button primary" /></li>
           </ul>
         </form>
+
       </section>
+
+      <footer class="footer">
+          <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+            <path d="M0 0 L50 75 L100 0 Z" fill="aliceblue" stroke="aliceblue"></path>
+          </svg>
+          <div class="footer__container">
+            Footer
+          </div>
+       </footer>
     </main>
-    <footer class="footer">
-      <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
-        <path d="M0 0 L50 75 L100 0 Z" fill="white" stroke="white"></path>
-      </svg>
-      <div class="footer__container">
-        Footer
-      </div>
-    </footer>
+
+  </div>
     <script src="./assets/js/app.js"></script>
   </body>
 </html>

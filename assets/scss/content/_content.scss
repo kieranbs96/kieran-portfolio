@@ -88,12 +88,23 @@
   }
 }
 
+.root-container {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
 .main {
-  margin-top: 15rem;
-  padding: 0 10vw;
+  padding: 0;
 
   &__container {
-    margin-bottom: 1.5rem;
+    padding: 15rem 10vw 2rem;
+    height: 100vh;
+    width: 100%;
+
+    scroll-snap-align: center;
   }
 }
 
@@ -102,11 +113,58 @@
 
   background: $mainColor;
   color: white;
+
+  scroll-snap-align: center;
+  height: 30vh;
+
+  flex: 1 0 100%;
   &__container {
     padding: 25px;
   }
 }
 
 .contact {
+  background: aliceblue;
+  margin-bottom: -10rem;
+  display: flex;
+  flex-wrap: wrap;
+  height: 73vh;
 
+  .button.primary {
+    width: 11rem;
+    height: 4rem;
+    font-size: 1.1rem;
+  }
+
+  ul.actions {
+    margin-top: 0;
+  }
+  &__description {
+    flex: 0 0 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-height: 24rem;
+
+    h2 {
+      margin-bottom: .5rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      span {
+        margin-top: .6rem;
+        display: block;
+      }
+    }
+  }
+
+  &__form {
+    flex: 1;
+    margin-left: 2rem;
+    margin-bottom: 0;
+  }
 }
