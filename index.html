@@ -51,7 +51,25 @@
       </section>
       <section id="contact" class="main__container">
         <h2>Contact</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nemo inventore quo ea consequatur nostrum soluta maxime error molestiae nihil in enim atque laudantium, vero dolorum quas dolores voluptatum fuga illo et necessitatibus consectetur temporibus. Eaque voluptas excepturi sint debitis placeat atque, dolorem cum amet rem exercitationem harum fugiat eveniet temporibus molestias consectetur omnis ut quisquam rerum voluptatem dignissimos ex culpa. Labore sit optio consequatur quisquam et dolor officia alias, placeat a suscipit dolorem veniam, laudantium cupiditate. Nobis ducimus, cumque quidem fugit placeat inventore omnis? Tempora eius eos distinctio odit dignissimos ratione facilis quasi laboriosam nostrum unde voluptatem, ducimus excepturi voluptas iste quia ullam eligendi, delectus, perspiciatis sunt laudantium recusandae. Ut in beatae temporibus odit officia ab molestiae laboriosam inventore quas ipsum. Minus tempora ipsum rem ullam ipsa et quam voluptatem dolore, laudantium unde iusto voluptatibus eveniet hic quia commodi, quae fuga necessitatibus odio maxime autem rerum delectus eos aperiam.
+        <form action="POST" data-netlify="true">
+          <div class="fields">
+            <div class="field half">
+              <input type="text" name="name" id="name" placeholder="Name" />
+            </div>
+            <div class="field half">
+              <input type="email" name="email" id="email" placeholder="Email" />
+            </div>
+            <div class="field">
+              <textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+            </div>
+            <div class="field">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+          </div>
+          <ul class="actions">
+            <li><input type="submit" value="Send Message" class="button primary" /></li>
+          </ul>
+        </form>
       </section>
     </main>
     <footer class="footer">
