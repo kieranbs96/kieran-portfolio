@@ -19,29 +19,38 @@ h1, h2, h3, h4, p {
   margin: 0; }
 
 h1, h2, h3 {
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 4.6rem;
+  margin-bottom: 2rem; }
 
 .header {
   color: #1a3549;
-  background: white;
-  width: 100%;
+  width: 6rem;
+  height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
-  transition: all .5s; }
+  transition: all 0.5s; }
   .header.scrolled {
     background: #1a3549; }
-    .header.scrolled .header__nav-list-item-link, .header.scrolled .header__name a {
+    .header.scrolled .header__nav-list-item-link,
+    .header.scrolled .header__name a {
       color: #fff; }
-      .header.scrolled .header__nav-list-item-link:hover, .header.scrolled .header__name a:hover {
+      .header.scrolled .header__nav-list-item-link:hover,
+      .header.scrolled .header__name a:hover {
         color: #ffc600; }
   .header__container {
-    padding: .3rem 10vw;
+    padding: 15vw 0.3rem;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh; }
   .header__nav {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    transform: rotate(-90deg);
+    position: relative;
+    top: 50%; }
     .header__nav-list {
       display: flex;
       align-items: center;
@@ -55,13 +64,15 @@ h1, h2, h3 {
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
-        transition: all .5s; }
+        transition: all 0.5s; }
         .header__nav-list-item-link:hover {
           color: #ffc600; }
+  .header__text {
+    display: none; }
   .header__name a {
-    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 2.8rem;
-    transition: all .5s;
+    transition: all 0.5s;
     color: #1a3549;
     text-decoration: none; }
     .header__name a:hover {
@@ -90,14 +101,26 @@ h1, h2, h3 {
   height: 30vh;
   flex: 1 0 100%; }
   .footer__container {
-    padding: 25px; }
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .footer__social a {
+    color: rgba(255, 255, 255, 0.7); }
+    .footer__social a:not(:first-child) {
+      margin-left: 20px; }
+    .footer__social a:hover {
+      color: #4024d4; }
 
 .contact {
   background: aliceblue;
   margin-bottom: -10rem;
-  display: flex;
-  flex-wrap: wrap;
   height: 73vh; }
+  .contact__container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80rem;
+    justify-content: center; }
   .contact .button.primary {
     width: 11rem;
     height: 4rem;
@@ -108,20 +131,53 @@ h1, h2, h3 {
     flex: 0 0 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    max-height: 24rem; }
+    max-height: 24rem;
+    margin-right: 1.5rem; }
     .contact__description h2 {
-      margin-bottom: .5rem; }
+      margin-bottom: 0.5rem; }
     .contact__description p {
       font-size: 1.4rem;
       line-height: 1.9rem; }
       .contact__description p span {
-        margin-top: .6rem;
+        margin-top: 0.6rem;
         display: block; }
   .contact__form {
     flex: 1;
     margin-left: 2rem;
     margin-bottom: 0; }
+
+#about {
+  background: #eff8ff; }
+
+.about__tools {
+  margin-top: 5rem; }
+  .about__tools-heading {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: none; }
+  .about__tools-web, .about__tools-soft {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3rem; }
+  .about__tools-tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1; }
+    .about__tools-tool-text {
+      display: none; }
+    .about__tools-tool-image {
+      max-width: 10rem;
+      height: 6rem;
+      width: auto;
+      margin-bottom: 0.6rem; }
+
+#portfolio {
+  background: steelblue; }
 
 /* Form */
 form {
