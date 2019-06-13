@@ -1,5 +1,5 @@
 runConsole();
-backgroundAnim();
+// backgroundAnim();
 headerScroll();
 
 
