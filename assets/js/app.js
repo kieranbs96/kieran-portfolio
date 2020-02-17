@@ -1,9 +1,11 @@
 runConsole();
 // backgroundAnim();
 headerScroll();
+navUpdate();
 
 
 window.addEventListener('scroll', function() {
+  navUpdate();
   headerScroll();
 });
 
@@ -28,6 +30,31 @@ function headerScroll() {
     console.log('> Remove Scrolled');
 
   }
+}
+
+function checkPage() {
+  var body = document.querySelector('main').clientHeight;
+  var about = document.querySelector('.about');
+  var portfolio = document.querySelector('.portfolio');
+  var contact = document.querySelector('.contact');
+  if (contact.getBoundingClientRect().top > contact.clientHeight) {
+    if (contact.getBoundingClientRect().top < (contact.clientHeight * 2)) {
+      return 'portfolio';
+    } else {
+      return 'about';
+    }
+  } else {
+    return 'contact';
+  }
+}
+
+function navUpdate() {
+  console.log('update');
+  document.querySelectorAll('header__nav-list-item').forEach((item) => {
+    console.log('forEach');
+    item.classList.remove('active');
+  })
+  document.querySelector(`#${checkPage()}_link`).parentElement.classList.add('active');
 }
 
 function backgroundAnim() {
